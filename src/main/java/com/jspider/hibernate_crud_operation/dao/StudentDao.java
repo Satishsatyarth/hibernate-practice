@@ -5,6 +5,7 @@ import org.hibernate.Transaction;
 
 import com.jspider.hibernate_crud_operation.config.HibernateUtil;
 import com.jspider.hibernate_crud_operation.dto.Student;
+import com.jspider.hibernate_crud_operation.dto.StudentAddress;
 
 public class StudentDao {
 
@@ -63,5 +64,26 @@ public class StudentDao {
             e.printStackTrace();
         }
     }
+    
+    
+    public void saveStudentaddress(StudentAddress studentAddress) {
+    		
+    		try {
+    			Session session = HibernateUtil.getSessionFactory().openSession();
+    			Transaction tx = session.beginTransaction();
+    			session.persist(studentAddress);
+    			tx.commit();
+    			System.err.println("Student address Saved");
+    		}catch (Exception e) {
+			e.printStackTrace();
+		}
+    }
 }
+
+
+
+
+
+
+
 

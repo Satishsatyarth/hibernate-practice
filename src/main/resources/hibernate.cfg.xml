@@ -21,6 +21,7 @@
 
 		<!-- Mapping Class -->
 		<mapping class="com.jspider.hibernate_crud_operation.dto.Student" />
+		<mapping class="com.jspider.hibernate_crud_operation.dto.StudentAddress"/>
 		
 		
 	</session-factory>

@@ -6,6 +6,7 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
 import com.jspider.hibernate_crud_operation.dto.Student;
+import com.jspider.hibernate_crud_operation.dto.StudentAddress;
 
 public class HibernateUtil {
 	private static SessionFactory sessionFactory;
@@ -15,6 +16,7 @@ public class HibernateUtil {
 			Configuration cfg = new Configuration();
 			cfg.configure("hibernate.cfg.xml"); // DB load
 			cfg.addAnnotatedClass(Student.class);
+			cfg.addAnnotatedClass(StudentAddress.class);
 
 			ServiceRegistry registry = new StandardServiceRegistryBuilder().applySettings(cfg.getProperties()).build();
 
