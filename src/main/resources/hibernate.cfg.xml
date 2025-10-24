@@ -16,12 +16,14 @@
 
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hibernatesh.show_sql">true</property>
-		<property name="hibernate.format_sql"></property>
+		<!-- <property name="hibernate.format_sql"></property> -->
 		<property name="hibernate.hbm2ddl.auto">update</property>
 
 		<!-- Mapping Class -->
 		<mapping class="com.jspider.hibernate_crud_operation.dto.Student" />
 		<mapping class="com.jspider.hibernate_crud_operation.dto.StudentAddress"/>
+		<mapping class="com.jspider.hibernate_OneToOne_Mapping.Employee"/>
+		<mapping class="com.jspider.hibernate_OneToOne_Mapping.Address"/>
 		
 		
 	</session-factory>

@@ -74,9 +74,12 @@ public class StudentDao {
     			session.persist(studentAddress);
     			tx.commit();
     			System.err.println("Student address Saved");
+    			session.close();
+    		
     		}catch (Exception e) {
 			e.printStackTrace();
 		}
+    		
     }
 }
 

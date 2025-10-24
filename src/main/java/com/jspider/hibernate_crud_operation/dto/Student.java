@@ -21,6 +21,8 @@ public class Student {
 	@Column(length=45)
 	private String city;
 	private String gender;
+	
+	private Certificate certificate;
 
 	public Student() {
 		
