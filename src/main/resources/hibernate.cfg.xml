@@ -1,30 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC
-	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 
 <hibernate-configuration>
+    <session-factory>
 
-	<!-- DataBase Configuration -->
-	<session-factory>
-		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/hibernate-jpa</property>
-		<property name="hibernate.connection.username">root</property>
-		<property name="hibernate.connection.password">Mysql</property>
+        <!-- Database Connection -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/hibernate-jpa</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Mysql</property>
 
-		<!-- Hibernate Configuratio -->
+        <!-- Hibernate Properties -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
 
-		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-		<property name="hibernatesh.show_sql">true</property>
-		<!-- <property name="hibernate.format_sql"></property> -->
-		<property name="hibernate.hbm2ddl.auto">update</property>
+        <!-- Mapping Classes -->
+        <mapping class="com.jspider.hibernate_ManyToMany_Mapping.Student"/>
+        <mapping class="com.jspider.hibernate_ManyToMany_Mapping.Course"/>
 
-		<!-- Mapping Class -->
-		<mapping class="com.jspider.hibernate_crud_operation.dto.Student" />
-		<mapping class="com.jspider.hibernate_crud_operation.dto.StudentAddress"/>
-		<mapping class="com.jspider.hibernate_OneToOne_Mapping.Employee"/>
-		<mapping class="com.jspider.hibernate_OneToOne_Mapping.Address"/>
-		
-		
-	</session-factory>
+    </session-factory>
 </hibernate-configuration>
