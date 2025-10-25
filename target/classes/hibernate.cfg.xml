@@ -15,11 +15,11 @@
         <!-- Hibernate Properties -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="hibernate.show_sql">true</property>
-        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
 
         <!-- Mapping Classes -->
-        <mapping class="com.jspider.hibernate_ManyToMany_Mapping.Student"/>
-        <mapping class="com.jspider.hibernate_ManyToMany_Mapping.Course"/>
+        <mapping class="com.jspider.hibernate_OneToManyAndManyToOne_Mapping.Employee"/>
+        <mapping class="com.jspider.hibernate_OneToManyAndManyToOne_Mapping.Department"/>
 
     </session-factory>
 </hibernate-configuration>
