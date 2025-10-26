@@ -16,6 +16,7 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="format_sql"></property>
 
         <!-- Mapping Classes -->
         <mapping class="com.jspider.hibernate_OneToManyAndManyToOne_Mapping.Employee"/>
